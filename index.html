@@ -37,10 +37,33 @@
         <p>这是我搭建的本网站。使用 HTML + CSS，借助AI辅助完成开发，包含导航栏、个人介绍、技能、项目展示、联系模块，电脑手机都可以正常浏览。</p>
     </div>
 
-    <div class="card">
-        <h3>可承接网页制作服务</h3>
-        <p>可以按照你的需求，从零搭建简约静态网页、个人主页、作品集页面，完成排版美化，输出完整可直接部署的网页代码。</p>
-    </div>
+    <div class="project-card">
+  <h3>项目：Python静态网页爬虫</h3>
+  <p><strong>项目描述：</strong>使用 Python + requests + BeautifulSoup 实现简单网页爬虫。针对练习测试网站抓取书籍名称，把爬取结果保存到本地txt文档。
+  <br>技能点：网络请求、HTML解析、数据文件存储，学习遵守爬虫robots协议，仅用于公开测试网站学习用途。</p>
+
+  <h4>核心代码片段：</h4>
+<pre style="background:#f4f4f4;padding:10px;font-size:12px;overflow-x:auto;">
+import requests
+from bs4 import BeautifulSoup
+
+url = "http://books.toscrape.com"
+headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+}
+response = requests.get(url, headers=headers, timeout=10)
+soup = BeautifulSoup(response.text, "html.parser")
+</pre>
+
+  <h4>代码界面：</h4>
+  <img src="spider-code.png" style="max-width:90%;">
+
+  <h4>爬取输出结果：</h4>
+  <img src="spider-result.png" style="max-width:90%;">
+
+  <p>🔗完整源码文件放在GitHub仓库</p>
+</div>
+
 </section>
 
 <section id="skill">
